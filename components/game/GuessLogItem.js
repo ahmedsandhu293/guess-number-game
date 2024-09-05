@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
   listItem: {
     borderColor: Colors.primary800,
     borderWidth: 1,
+    width: "100%",
     borderRadius: 40,
     padding: 12,
     marginVertical: 8,
