@@ -53,10 +53,16 @@ const GameScreen = ({ userNumber, onGameOver }) => {
       (direction === "lower" && currentGuess < userNumber) ||
       (direction === "greater" && currentGuess > userNumber)
     ) {
-      Alert.alert(`Don't Lie!`, "You know that this is wrong", {
-        text: "Sorry",
-        style: "cancel",
-      });
+      Alert.alert(
+        "Don't Lie!",
+        "You know that this is wrong",
+        [
+          {
+            text: "Sorry",
+            style: "cancel",
+          },
+        ]
+      );
       return;
     }
     if (direction === "lower") {
@@ -72,6 +78,7 @@ const GameScreen = ({ userNumber, onGameOver }) => {
     setCurrentGuess(newRndNumber);
     setGuessRounds((prevState) => [newRndNumber, ...prevState]);
   };
+  
 
   const guessRoundsLength = guessRounds.length;
 
